@@ -17,7 +17,7 @@ body {
 
 /* CONTAINERS */
 
-.flex-div {
+.flex-element {
     display: flex;
 }
 
@@ -31,10 +31,12 @@ body {
 
 .f-size-L {
     font-size: 20px;
+    margin: 20px 0px;
 }
 
 .f-size-M {
     font-size: 16px;
+    margin: 10px 0px;
 }
 
 .f-size-S {
@@ -61,32 +63,46 @@ main {
 
 /* SIDE-BAR */
 .side-bar {
-    width: 300px;
+    width: 250px;
     /* TODO Da rimuovere */
     border: 2px solid yellow;
 }
 
+
+
 /* MAIN APP */
 .main-app {
-    width: calc(100% - 300px);
+    width: calc(100% - 250px);
     /* TODO Da rimuovere */
     border: 2px solid greenyellow;
     overflow: auto;
 
 }
 
-.section-content {
-    display: flex;
-    flex-wrap: wrap;
-}
-
+/* TODO Gestire restringimento schermo */
 .top-banner {
     height: 80px;
-    background-color: #000;
-    opacity: 60%;
+    background-color: rgba(0, 0, 0, 0.60);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 5px 25px;
     position: fixed;
-    left: 300px;
-    right: 0;
+    left: 250px;
+    right: 0px;
+    z-index: 2;
+}
+
+.btn {
+    border: 2px solid #FFF;
+    padding: 10px 40px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #FFF;
+}
+
+.btn:hover {
+    padding: 12px 48px;
 }
 
 .content {
@@ -94,6 +110,36 @@ main {
     padding: 80px 10px 0px 10px;
 }
 
+
+/* NAVIGATION BAR */
+
+.content-bar {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 0px;
+    line-height: 40px;
+}
+
+.content-bar > ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.content-bar a {
+    padding: 5px 10px;
+    margin: 0px 10px;
+    text-decoration: none;
+    color: #FFF;
+}
+
+/* CONTENT */
+
+.section-content {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .card {
     width: calc((100% - 5px * 2 * 6) / 6);
@@ -108,11 +154,12 @@ main {
 }
 
 .card-img > img {
+    object-fit: cover;
     width: 100%;
 }
 
 .play {
-    font-size: 72px;
+    font-size: 5vw;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -120,9 +167,18 @@ main {
     display: none;
 }
 
-/* CONTENT */
+.circle-img {
+    border-radius: 100%;
+}
 
 
+.card:hover .play {
+    display: block;
+}
+
+.card:hover .card-img > img {
+    opacity: 50%;
+}
 
 
 
@@ -143,16 +199,38 @@ footer {
    MEDIAQUERY
 **************************/
 
- @media all and (max-width: 1100px){
+@media all and (max-width: 1100px){
+
+    .card {
+        width: calc((100% - 5px * 2 * 4) / 4);
+    }
 
  }
 
 
- @media all and (max-width: 700px){
+@media all and (max-width: 700px){
+
+    .card {
+        width: calc((100% - 5px * 2 * 2) / 2);
+    }
+    
+    .play {
+        font-size: 10vw;
+    }
 
 }
 
 
 @media all and (max-width: 600px){
+
+    .side-bar {
+        width: 50px;
+    }
+    
+    /* MAIN APP */
+    .main-app {
+        width: calc(100% - 50px);  
+    }
+
 
 }

@@ -64,10 +64,43 @@ main {
 /* SIDE-BAR */
 .side-bar {
     width: 250px;
+    background-color: #000;
+    padding: 0px 20px;
     /* TODO Da rimuovere */
     border: 2px solid yellow;
 }
 
+.side-top {
+    height: 200px;
+    /* TODO Da rimuovere */
+    border: 2px solid purple
+}
+
+.side-middle {
+    height: calc(100vh - 400px);
+    min-height: 200px;
+    /* TODO Da rimuovere */
+    border: 2px solid rgb(0, 128, 111)
+}
+
+.side-bottom {
+    height: 100px;
+    /* TODO Da rimuovere */
+    border: 2px solid rgb(243, 165, 8)
+}
+
+
+.logo {
+    height: 50px;
+}
+
+.side-item > span {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
 
 
 /* MAIN APP */
@@ -188,14 +221,13 @@ main {
 
 /* FOOTER */
 
+/* TODO Aggiungere effetti hover */
 footer {
     height: 100px;
     padding: 20px 10px;
     align-items: center;
     justify-content: space-between;
     background-color: #282828;
-    /* TODO Da rimuovere */
-    border: 2px solid red;  
 }
 
 .foot-left {

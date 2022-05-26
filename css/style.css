@@ -73,29 +73,55 @@ main {
     background-color: #000;
     padding: 0px 20px;
     overflow: hidden;
-    /* TODO Da rimuovere */
-    border: 2px solid yellow;
 }
 
 .side-top {
     height: 200px;
-    /* TODO Da rimuovere */
-    border: 2px solid purple
 }
 
 .side-middle {
     height: calc(100vh - 400px);
     min-height: 200px;
     overflow: auto;
-    /* TODO Da rimuovere */
-    border: 2px solid rgb(0, 128, 111)
 }
 
 .side-bottom {
     height: 100px;
-    /* TODO Da rimuovere */
-    border: 2px solid rgb(243, 165, 8)
 }
+
+
+.logo {
+    height: 50px;
+    margin-bottom: 30px;
+}
+
+.logo-small {
+    height: 32px;
+    width: 32px;
+    display: none;
+}
+
+.side-top > .side-item {
+    margin: 5px 0px;
+}
+
+.side-middle > .side-item {
+    margin: 20px 0px
+}
+
+.nav-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.side-item > a {
+    text-decoration: none;
+    color: white;
+}
+
 
 .side-middle .fa-square-plus {
     font-size: 36px;
@@ -117,30 +143,7 @@ main {
 }
 
 
-.logo {
-    height: 50px;
-}
 
-.side-top > .side-item {
-    margin: 5px 0px;
-}
-
-.side-middle > .side-item {
-    margin: 20px 0px
-}
-
-.side-item > span {
-    width: 32px;
-    height: 32px;
-    margin-right: 10px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.side-item > a {
-    text-decoration: none;
-    color: white;
-}
 
 .side-item:hover {
     opacity: 100%;
@@ -150,13 +153,10 @@ main {
 /* MAIN APP */
 .main-app {
     width: calc(100% - 250px);
-    /* TODO Da rimuovere */
-    border: 2px solid greenyellow;
     overflow: auto;
 
 }
 
-/* TODO Gestire restringimento schermo */
 .top-banner {
     height: 80px;
     background-color: rgba(0, 0, 0, 0.60);
@@ -227,8 +227,6 @@ main {
     width: calc((100% - 5px * 2 * 6) / 6);
     text-align: center;
     margin: 5px;
-    /* TODO Da rimuovere */
-    border: 2px solid greenyellow;
 }
 
 .card-img {
@@ -266,7 +264,6 @@ main {
 
 /* FOOTER */
 
-/* TODO Aggiungere effetti hover */
 footer {
     height: 100px;
     padding: 20px 10px;
@@ -383,11 +380,38 @@ footer {
 
     .side-bar {
         width: 50px;
+        padding: 0px;
     }
+
+    .side-bar .logo {
+        display: none;
+    }
+
+    .side-item img {
+        margin-right: 0;
+    }
+
+    .side-item {
+        text-align: center;
+    }
+
+    .side-bar .logo-small {
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    .side-top a, .side-middle > div, .side-bottom a, .side-bottom .line{
+        display: none;
+    }
+
     
     /* MAIN APP */
     .main-app {
         width: calc(100% - 50px);  
+    }
+
+    .top-banner {
+        left: 50px;
     }
 
 

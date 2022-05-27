@@ -149,7 +149,7 @@ main {
 
 
 
-.side-item:hover {
+.side-item:hover a {
     opacity: 100%;
     font-weight: 800;
 }
@@ -474,6 +474,10 @@ background: rgba(255,255,255, 0.50);
 
     .side-top span, .side-middle > div, .side-bottom span, .side-bottom .line{
         display: none;
+    }
+
+    .side-bottom .download-btn {
+        margin-bottom: 10px;
     }
 
     

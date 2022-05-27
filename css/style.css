@@ -28,8 +28,8 @@ body {
 .line {
     height: 1px;
     background-color: #FFF;
-    margin: 5px 0px;
-    opacity: 80%;
+    margin: 10px 0px;
+    opacity: 60%;
 }
 
 
@@ -37,12 +37,12 @@ body {
 
 .f-size-L {
     font-size: 20px;
-    margin: 20px 0px;
+    margin: 5px 0px;
 }
 
 .f-size-M {
     font-size: 16px;
-    margin: 10px 0px;
+    margin: 5px 0px;
 }
 
 .f-size-S {
@@ -55,6 +55,11 @@ body {
 
 .f-trans {
     opacity: 80%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 /**************************
@@ -77,10 +82,12 @@ main {
 
 .side-top {
     height: 200px;
+    padding-top: 10px;
+    margin-bottom: 40px;
 }
 
 .side-middle {
-    height: calc(100vh - 400px);
+    height: calc(100vh - 440px);
     min-height: 200px;
     overflow: auto;
 }
@@ -92,7 +99,7 @@ main {
 
 .logo {
     height: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .logo-small {
@@ -102,7 +109,7 @@ main {
 }
 
 .side-top > .side-item {
-    margin: 5px 0px;
+    margin: 10px 0px;
 }
 
 .side-middle > .side-item {
@@ -117,10 +124,7 @@ main {
     vertical-align: middle;
 }
 
-.side-item > a {
-    text-decoration: none;
-    color: white;
-}
+
 
 
 .side-middle .fa-square-plus {
@@ -149,6 +153,7 @@ main {
     opacity: 100%;
     font-weight: 800;
 }
+
 
 /* MAIN APP */
 .main-app {
@@ -179,7 +184,7 @@ main {
 }
 
 .btn:hover {
-    padding: 12px 48px;
+    padding: 12px 42px;
 }
 
 .content {
@@ -213,7 +218,6 @@ main {
 
 .content-bar a:hover {
     opacity: 100%;
-    font-weight: 800;
 }
 
 /* CONTENT */
@@ -221,6 +225,7 @@ main {
 .section-content {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 30px;
 }
 
 .card {
@@ -233,7 +238,7 @@ main {
     position: relative;
 }
 
-.card-img > img {
+.card-img img {
     object-fit: cover;
     width: 100%;
 }
@@ -251,15 +256,21 @@ main {
     border-radius: 100%;
 }
 
-
 .card:hover .play {
     display: block;
 }
 
-.card:hover .card-img > img {
+.card:hover .card-img img {
     opacity: 50%;
 }
 
+.content section {
+    margin-bottom: 50px;
+}
+
+.content section:last-child {
+    margin-bottom: 0px;
+}
 
 
 /* FOOTER */
@@ -294,6 +305,9 @@ footer {
     margin-right: 20px;
 }
 
+.song-info a:hover{
+    text-decoration: underline;
+}
 
 .foot-right {
     align-items: center;
@@ -320,6 +334,29 @@ footer {
     top: 0px;
 }
 
+.bar-circle {
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    border-radius: 100%;
+    position: absolute;
+    right: 0px;
+    top: -6px;
+    display: none;
+}
+
+.bar:hover .advancement {
+    background-color: greenyellow;
+}
+
+.bar:hover .bar-circle {
+    display: block;
+}
+
+.bar:hover {
+    cursor: pointer;
+}
+
 .prog-bar {
     align-items: center;
 }
@@ -340,6 +377,15 @@ footer {
     margin: 0px 10px;
 }
 
+.f-left-icons i:hover, .player-icons i:hover, .foot-right i:hover {
+    cursor: pointer;
+    opacity: 100%;
+} 
+
+.player-icons .fa-circle-play:hover {
+    font-size: 22px;
+}
+
 .foot-center .bar {
     width: 25vw;
 }
@@ -348,6 +394,32 @@ footer {
     width: 10vw;
     max-width: 120px;
 }
+
+
+/* SCROLL BAR */
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: rgb(0,0,0); 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: rgba(255,255,255, 0.60); 
+border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: rgba(255,255,255, 0.50);
+}
+
 
 
 /**************************
@@ -400,7 +472,7 @@ footer {
         margin-left: 10px;
     }
 
-    .side-top a, .side-middle > div, .side-bottom a, .side-bottom .line{
+    .side-top span, .side-middle > div, .side-bottom span, .side-bottom .line{
         display: none;
     }
 
@@ -414,5 +486,12 @@ footer {
         left: 50px;
     }
 
+    /* FOOTER */
+    .f-left-icons {
+        flex-direction: column;
+    }
 
+    .song-info {
+        margin-right: 10px;
+    }
 }
